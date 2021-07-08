@@ -41,3 +41,21 @@ function reverseCapsDoubleDigits() {
     }
     document.getElementById("textOut").value = output;
 }
+
+function removeDuplicateWords() {
+    //var words = [];
+    var input = document.getElementById("textIn").value;
+    var output = "";
+    
+    words = input.split(" ");
+    let uniqueWords = [];
+
+    words.forEach((word) => {
+        if(uniqueWords.includes(word) == false){
+            uniqueWords.push(word);
+        }
+    });
+    output = uniqueWords.join(" ");
+    
+    document.getElementById("textOut").value = output;
+}
